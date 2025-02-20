@@ -1,0 +1,22 @@
+openapi: 3.0.0
+info:
+  title: Taskify Chat API
+  version: "1.0"
+paths:
+  /auth/login:
+    post:
+      summary: Autentica o usuário via OAuth2
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Login realizado com sucesso
